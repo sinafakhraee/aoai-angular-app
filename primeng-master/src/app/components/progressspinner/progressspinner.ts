@@ -1,0 +1,37 @@
+import { NgModule, Component, Input, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@Component({
+    selector: 'p-progressSpinner',
+    template: `
+        <div class="p-progress-spinner" [ngStyle]="style" [ngClass]="styleClass" role="alert" aria-busy="true">
+            <svg class="p-progress-spinner-svg" viewBox="25 25 50 50" [style.animation-duration]="animationDuration">
+                <circle class="p-progress-spinner-circle" cx="50" cy="50" r="20" [attr.fill]="fill" [attr.stroke-width]="strokeWidth" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    `,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None,
+    styleUrls: ['./progressspinner.css'],
+    host: {
+        class: 'p-element'
+    }
+})
+export class ProgressSpinner {
+    @Input() style: any;
+
+    @Input() styleClass: string;
+
+    @Input() strokeWidth: string = '2';
+
+    @Input() fill: string = 'none';
+
+    @Input() animationDuration: string = '2s';
+}
+
+@NgModule({
+    imports: [CommonModule],
+    exports: [ProgressSpinner],
+    declarations: [ProgressSpinner]
+})
+export class ProgressSpinnerModule {}

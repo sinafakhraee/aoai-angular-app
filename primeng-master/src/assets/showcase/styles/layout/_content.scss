@@ -1,0 +1,12 @@
+.layout-content {
+    margin-left: 250px;
+    padding-top: 5rem;
+
+    .layout-content-inner {
+        padding: 1rem 1rem;
+    }
+
+    .card {
+        @include card;
+    }
+}

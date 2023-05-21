@@ -1,0 +1,38 @@
+{
+    "data": [
+        {
+            "name": "Document File",
+            "icon": "pi pi-file",
+            
+            "children": [
+                
+                {
+                    "name": "File",
+                    "children": [
+                        {
+                            "name": "Upload",
+                            "routerLink": "/fileupload"
+                        }
+                    ]
+                }                     
+              
+              
+            ]
+        },
+        {
+            "name": "Free Text",
+            "icon": "pi pi-comment",
+            "children": [
+                
+            ]
+        },
+        {
+            "name": "Index Web/URL",
+            "icon": "pi pi-globe",
+            "children": [
+                
+            ]
+        }
+
+           ]
+}
