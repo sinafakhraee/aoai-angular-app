@@ -2,7 +2,7 @@
 
 ## 1) Overview of the application
 
-This is a sample application written in Angular/PrimeNG as the frontend and Python/Flask as the backend services which use Azure OpenAI embeddings and GPT 3.0 models for text summarication and Q&A.  
+This is a sample application written in Angular/PrimeNG as the frontend and Python/Flask as the backend services which use Azure OpenAI embeddings and GPT-3 models for text summarication and Q&A.  
 
 ### User Interface
 
