@@ -8,7 +8,7 @@ This is a sample application written in Angular/PrimeNG as the frontend and Pyth
 
 ![User Interface](https://github.com/sinafakhraee/aoai-angular-app/blob/main/images/webui.jpg)
 
-### Architecture ([Referenced from azure-open-ai-embeddings-qna repo](https://github.com/ruoccofabrizio/azure-open-ai-embeddings-qna)
+### Architecture ([Referenced from azure-open-ai-embeddings-qna repo](https://github.com/ruoccofabrizio/azure-open-ai-embeddings-qna))
 
 ![Architecture](https://github.com/sinafakhraee/aoai-angular-app/blob/main/images/architecture.png)
 
