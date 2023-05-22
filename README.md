@@ -18,7 +18,7 @@ To run the application, you need to have the following Azure services and tools:
 
 - [Azure OpenAI service](https://azure.microsoft.com/en-us/products/cognitive-services/openai-service/)
 - [Azure Form Recognizer](https://azure.microsoft.com/en-us/products/form-recognizer/)
-- [Git](https://git-scm.com/downloads)
+- [Docker](https://docs.docker.com/engine/install/)
 
 Once you have these services and tools, you can run the application on your local machine using the docker-compose command. 
 
