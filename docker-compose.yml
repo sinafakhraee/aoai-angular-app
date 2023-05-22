@@ -1,0 +1,13 @@
+version: '3'
+services:
+  flask:
+    image: "sinafakhraee/aoai-backend-service:latest"
+    env_file: .env
+    ports:
+      - "5000:5000"
+  redis:
+    image: "redislabs/redismod:latest"
+  ng-app:
+    image: "sinafakhraee/ng-app:latest"
+    ports:
+      - "8080:8080"

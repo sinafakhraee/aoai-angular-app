@@ -2,7 +2,7 @@
 
 ## 1) Overview of the application
 
-This is a sample application written in Angular/PrimeNG as the fontend and Python/Flask as the backend services which use Azure OpenAI embeddings and GPT 3.0 models for text summarication and Q&A.  
+This is a sample application written in Angular/PrimeNG as the frontend and Python/Flask as the backend services which use Azure OpenAI embeddings and GPT 3.0 models for text summarication and Q&A.  
 
 ### User Interface
 
@@ -22,8 +22,9 @@ To run the application, you need to have the following Azure services and tools:
 
 Once you have these services and tools, you can run the application on your local machine using the docker-compose command. 
 
-**Make sure to add Azure API keys and OpenAI models to your .env file and have it on the same directory where you run the command.**
+**Make sure to add Azure API keys and OpenAI models to your .env file and have it in the same directory where you run the docker command.**
 
+### Sample .env file:
 ```bash
 OPENAI_API_KEY=XXXxxxxxxXXXXXxxxxxxx
 OPENAI_API_BASE=https://youraoaiservice.openai.azure.com/
@@ -40,7 +41,30 @@ REDIS_USERNAME=test
 REDIS_PASSWORD=
 REDIS_SSL=False
 ```
-Here is docker-compose command to run the application:
+### docker-compose.yml file:
+
+```yml
+version: '3'
+services:
+  flask:
+    image: "sinafakhraee/aoai-backend-service:latest"
+    env_file: .env
+    ports:
+      - "5000:5000"
+  redis:
+    image: "redislabs/redismod:latest"
+  ng-app:
+    image: "sinafakhraee/ng-app:latest"
+    ports:
+      - "8080:8080"
+```
+
+### docker-compose command:
 
 ```bash
 docker-compose up
+```
+## <u>Referenced Repositories</u>
+
+- [azure-openai-samples](https://github.com/Azure/azure-openai-samples)
+- [azure-open-ai-embeddings-qna](https://github.com/ruoccofabrizio/azure-open-ai-embeddings-qna)
